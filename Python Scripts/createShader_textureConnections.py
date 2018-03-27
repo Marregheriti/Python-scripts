@@ -103,3 +103,5 @@ def shaderConnections(ddsFiles, obj, shader, path):
             fileTexNode = pm.shadingNode("file", n="RoughnessFileTex", asTexture=True)
             pm.connectAttr(fileTexNode + ".outColor", shader + ".specularColor")
             pm.setAttr("%s.fileTextureName" % fileTexNode, path[0] + "\\" + s, type="string")
+
+main()
